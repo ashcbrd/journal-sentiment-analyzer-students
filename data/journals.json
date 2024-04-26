@@ -1,0 +1,978 @@
+[
+  {
+    "_id": "a1d3b499c65d34f91bf4273a",
+    "title": "Achievement Unlocked",
+    "entry": "Today, I accomplished a personal goal I've been working towards for months. It feels incredible to see my hard work pay off.",
+    "student_id": "661a53cd704ab3e24c34c1f0",
+    "sentiment_score": [
+      {
+        "label": "admiration",
+        "score": 0.0018937611210498815
+      },
+      {
+        "label": "amusement",
+        "score": 0.00017782695716390085
+      },
+      {
+        "label": "anger",
+        "score": 0.000043994964192390665
+      },
+      {
+        "label": "annoyance",
+        "score": 0.00008960357337081426
+      },
+      {
+        "label": "approval",
+        "score": 0.006013993814438105
+      },
+      {
+        "label": "caring",
+        "score": 0.0016458198082595463
+      },
+      {
+        "label": "confusion",
+        "score": 0.00006334523246009636
+      },
+      {
+        "label": "curiosity",
+        "score": 0.002085377889022827
+      },
+      {
+        "label": "desire",
+        "score": 0.0009464434874547424
+      },
+      {
+        "label": "disappointment",
+        "score": 0.000049124604774932534
+      },
+      {
+        "label": "disapproval",
+        "score": 0.00004911038447402304
+      },
+      {
+        "label": "disgust",
+        "score": 0.0000922381903711634
+      },
+      {
+        "label": "embarrassment",
+        "score": 0.000032603477424189806
+      },
+      {
+        "label": "excitement",
+        "score": 0.9632383589744568
+      },
+      {
+        "label": "fear",
+        "score": 0.00014415284990090847
+      },
+      {
+        "label": "gratitude",
+        "score": 0.0006425391625016928
+      },
+      {
+        "label": "grief",
+        "score": 0.000013204055174215577
+      },
+      {
+        "label": "joy",
+        "score": 0.019507583648443222
+      },
+      {
+        "label": "love",
+        "score": 0.00009543248819550896
+      },
+      {
+        "label": "nervousness",
+        "score": 0.0003928703462843151
+      },
+      {
+        "label": "optimism",
+        "score": 0.0024563765828756094
+      },
+      {
+        "label": "pride",
+        "score": 0.00007659760095187676
+      },
+      {
+        "label": "realization",
+        "score": 0.00010863483967874527
+      },
+      {
+        "label": "relief",
+        "score": 0.00027371749937558115
+      },
+      {
+        "label": "remorse",
+        "score": 0.000055231337518081635
+      },
+      {
+        "label": "sadness",
+        "score": 0.000028246684962784134
+      },
+      {
+        "label": "surprise",
+        "score": 0.0003340431120751207
+      },
+      {
+        "label": "neutral",
+        "score": 0.00020662200546351004
+      }
+    ],
+    "created_at": "2024-04-15T14:32:51.791000",
+    "updated_at": "2024-04-15T14:32:51.791000"
+  },
+  {
+    "_id": "f64d1dd0ad57c5d803beba3e",
+    "title": "Reflections",
+    "entry": "Spent some time reflecting on my goals and aspirations today. It's important to stay focused on what truly matters to me.",
+    "student_id": "661a53cd704ab3e24c34c1f0",
+    "sentiment_score": [
+      {
+        "label": "admiration",
+        "score": 0.0018106423920163517
+      },
+      {
+        "label": "amusement",
+        "score": 0.00016500210749947268
+      },
+      {
+        "label": "anger",
+        "score": 0.000038070100253328636
+      },
+      {
+        "label": "annoyance",
+        "score": 0.00007111120792920855
+      },
+      {
+        "label": "approval",
+        "score": 0.005855536077588081
+      },
+      {
+        "label": "caring",
+        "score": 0.0015420272262244825
+      },
+      {
+        "label": "confusion",
+        "score": 0.00005841754080583145
+      },
+      {
+        "label": "curiosity",
+        "score": 0.0020473789700864553
+      },
+      {
+        "label": "desire",
+        "score": 0.0009209439318478105
+      },
+      {
+        "label": "disappointment",
+        "score": 0.00004420472323467936
+      },
+      {
+        "label": "disapproval",
+        "score": 0.000046361769606014475
+      },
+      {
+        "label": "disgust",
+        "score": 0.00008419551627934316
+      },
+      {
+        "label": "embarrassment",
+        "score": 0.000031292123334111825
+      },
+      {
+        "label": "excitement",
+        "score": 0.9628211851119995
+      },
+      {
+        "label": "fear",
+        "score": 0.00012652975591519433
+      },
+      {
+        "label": "gratitude",
+        "score": 0.0006842556077164419
+      },
+      {
+        "label": "grief",
+        "score": 0.00001527827338245474
+      },
+      {
+        "label": "joy",
+        "score": 0.019514379441857338
+      },
+      {
+        "label": "love",
+        "score": 0.00008995454015599921
+      },
+      {
+        "label": "nervousness",
+        "score": 0.00037249454623709667
+      },
+      {
+        "label": "optimism",
+        "score": 0.0023802887513045073
+      },
+      {
+        "label": "pride",
+        "score": 0.00008736022245417127
+      },
+      {
+        "label": "realization",
+        "score": 0.00013114459011606145
+      },
+      {
+        "label": "relief",
+        "score": 0.0003122451363625827
+      },
+      {
+        "label": "remorse",
+        "score": 0.00006422249286489969
+      },
+      {
+        "label": "sadness",
+        "score": 0.00003127930055323939
+      },
+      {
+        "label": "surprise",
+        "score": 0.0003690856641573014
+      },
+      {
+        "label": "neutral",
+        "score": 0.00022499434918563032
+      }
+    ],
+    "created_at": "2024-04-16T10:17:29.005000",
+    "updated_at": "2024-04-16T10:17:29.005000"
+  },
+  {
+    "_id": "98b9e9318058f7bfb6d398ea",
+    "title": "Mindful Moments",
+    "entry": "Took some time today to practice mindfulness and gratitude. It's amazing how a few moments of reflection can shift your perspective.",
+    "student_id": "661a53cd704ab3e24c34c1f0",
+    "sentiment_score": [
+      {
+        "label": "admiration",
+        "score": 0.0019252596829380999
+      },
+      {
+        "label": "amusement",
+        "score": 0.00016944812779514503
+      },
+      {
+        "label": "anger",
+        "score": 0.000040579431477099955
+      },
+      {
+        "label": "annoyance",
+        "score": 0.00008137513603469366
+      },
+      {
+        "label": "approval",
+        "score": 0.006113886043876171
+      },
+      {
+        "label": "caring",
+        "score": 0.0016104028162886505
+      },
+      {
+        "label": "confusion",
+        "score": 0.00006090107640730953
+      },
+      {
+        "label": "curiosity",
+        "score": 0.002089712998747468
+      },
+      {
+        "label": "desire",
+        "score": 0.0009190499807965457
+      },
+      {
+        "label": "disappointment",
+        "score": 0.00004601278462511665
+      },
+      {
+        "label": "disapproval",
+        "score": 0.000046530128532423645
+      },
+      {
+        "label": "disgust",
+        "score": 0.00008710777444086298
+      },
+      {
+        "label": "embarrassment",
+        "score": 0.000031369142616632655
+      },
+      {
+        "label": "excitement",
+        "score": 0.9630930428504944
+      },
+      {
+        "label": "fear",
+        "score": 0.00013575360093715757
+      },
+      {
+        "label": "gratitude",
+        "score": 0.0006241084740531445
+      },
+      {
+        "label": "grief",
+        "score": 0.000013285630030589166
+      },
+      {
+        "label": "joy",
+        "score": 0.019617610454559326
+      },
+      {
+        "label": "love",
+        "score": 0.00009645101623356372
+      },
+      {
+        "label": "nervousness",
+        "score": 0.0003714531288765812
+      },
+      {
+        "label": "optimism",
+        "score": 0.0023411778902261257
+      },
+      {
+        "label": "pride",
+        "score": 0.00008106111905477586
+      },
+      {
+        "label": "realization",
+        "score": 0.00011204372409120545
+      },
+      {
+        "label": "relief",
+        "score": 0.0002946663258420975
+      },
+      {
+        "label": "remorse",
+        "score": 0.000056845153445527226
+      },
+      {
+        "label": "sadness",
+        "score": 0.00002960001762557509
+      },
+      {
+        "label": "surprise",
+        "score": 0.00034245049780879986
+      },
+      {
+        "label": "neutral",
+        "score": 0.00021298329479800123
+      }
+    ],
+    "created_at": "2024-04-17T08:59:43.319000",
+    "updated_at": "2024-04-17T08:59:43.319000"
+  },
+  {
+    "_id": "7b8323e9cf0fc4f4f731b8e4",
+    "title": "Gratefulness Journal",
+    "entry": "Writing down things I'm grateful for has become a daily habit. It's amazing how it boosts my mood and overall well-being.",
+    "student_id": "661a53cd704ab3e24c34c1f0",
+    "sentiment_score": [
+      {
+        "label": "admiration",
+        "score": 0.0019180214742945437
+      },
+      {
+        "label": "amusement",
+        "score": 0.00016881022045658505
+      },
+      {
+        "label": "anger",
+        "score": 0.000040169546758342385
+      },
+      {
+        "label": "annoyance",
+        "score": 0.00008212120023886472
+      },
+      {
+        "label": "approval",
+        "score": 0.006092342782348156
+      },
+      {
+        "label": "caring",
+        "score": 0.001605216352738738
+      },
+      {
+        "label": "confusion",
+        "score": 0.00006046278769322832
+      },
+      {
+        "label": "curiosity",
+        "score": 0.002091496495708108
+      },
+      {
+        "label": "desire",
+        "score": 0.0009163765024240613
+      },
+      {
+        "label": "disappointment",
+        "score": 0.00004588775462590963
+      },
+      {
+        "label": "disapproval",
+        "score": 0.00004659085535239789
+      },
+      {
+        "label": "disgust",
+        "score": 0.00008651215963664618
+      },
+      {
+        "label": "embarrassment",
+        "score": 0.000031210768078270376
+      },
+      {
+        "label": "excitement",
+        "score": 0.9631179571151733
+      },
+      {
+        "label": "fear",
+        "score": 0.00013471578461460054
+      },
+      {
+        "label": "gratitude",
+        "score": 0.0006299301425967216
+      },
+      {
+        "label": "grief",
+        "score": 0.000013121647159615517
+      },
+      {
+        "label": "joy",
+        "score": 0.019641035944461823
+      },
+      {
+        "label": "love",
+        "score": 0.00009598914427740827
+      },
+      {
+        "label": "nervousness",
+        "score": 0.00037106373082572234
+      },
+      {
+        "label": "optimism",
+        "score": 0.0023422421236789227
+      },
+      {
+        "label": "pride",
+        "score": 0.00008049647615738234
+      },
+      {
+        "label": "realization",
+        "score": 0.00011228696184007892
+      },
+      {
+        "label": "relief",
+        "score": 0.0002948658990662241
+      },
+      {
+        "label": "remorse",
+        "score": 0.00005668228735006735
+      },
+      {
+        "label": "sadness",
+        "score": 0.000029690823738982804
+      },
+      {
+        "label": "surprise",
+        "score": 0.00034272320647105503
+      },
+      {
+        "label": "neutral",
+        "score": 0.0002134144970291251
+      }
+    ],
+    "created_at": "2024-04-18T07:21:05.076000",
+    "updated_at": "2024-04-18T07:21:05.076000"
+  },
+  {
+    "_id": "2c8f13d4c3bcfdcd5b5ec7ea",
+    "title": "Happiness Journal",
+    "entry": "Documenting moments of joy and happiness has become my daily ritual. It's a reminder to cherish the little things in life.",
+    "student_id": "661a53cd704ab3e24c34c1f0",
+    "sentiment_score": [
+      {
+        "label": "admiration",
+        "score": 0.0018992654865756636
+      },
+      {
+        "label": "amusement",
+        "score": 0.00016814612483937222
+      },
+      {
+        "label": "anger",
+        "score": 0.00003945618917934683
+      },
+      {
+        "label": "annoyance",
+        "score": 0.00008201700341403192
+      },
+      {
+        "label": "approval",
+        "score": 0.00611618837386322
+      },
+      {
+        "label": "caring",
+        "score": 0.0016213707889617686
+      },
+      {
+        "label": "confusion",
+        "score": 0.000061334487225800544
+      },
+      {
+        "label": "curiosity",
+        "score": 0.002095239220142722
+      },
+      {
+        "label": "desire",
+        "score": 0.0009208227233920097
+      },
+      {
+        "label": "disappointment",
+        "score": 0.00004604451517727986
+      },
+      {
+        "label": "disapproval",
+        "score": 0.00004650901638266431
+      },
+      {
+        "label": "disgust",
+        "score": 0.00008720310882166776
+      },
+      {
+        "label": "embarrassment",
+        "score": 0.00003124060545625049
+      },
+      {
+        "label": "excitement",
+        "score": 0.9630873203277588
+      },
+      {
+        "label": "fear",
+        "score": 0.0001358793109300583
+      },
+      {
+        "label": "gratitude",
+        "score": 0.0006297749912257495
+      },
+      {
+        "label": "grief",
+        "score": 0.000013147152901366684
+      },
+      {
+        "label": "joy",
+        "score": 0.01966234685444832
+      },
+      {
+        "label": "love",
+        "score": 0.00009633529580078214
+      },
+      {
+        "label": "nervousness",
+        "score": 0.00037108837029655266
+      },
+      {
+        "label": "optimism",
+        "score": 0.0023409599911123514
+      },
+      {
+        "label": "pride",
+        "score": 0.00008070159720853788
+      },
+      {
+        "label": "realization",
+        "score": 0.0001123038904608936
+      },
+      {
+        "label": "relief",
+        "score": 0.00029485838866072845
+      },
+      {
+        "label": "remorse",
+        "score": 0.000056698628236711115
+      },
+      {
+        "label": "sadness",
+        "score": 0.00002969100957372003
+      },
+      {
+        "label": "surprise",
+        "score": 0.000342625237200245
+      },
+      {
+        "label": "neutral",
+        "score": 0.00021335677718091762
+      }
+    ],
+    "created_at": "2024-04-19T09:12:58.804000",
+    "updated_at": "2024-04-19T09:12:58.804000"
+  },
+  {
+    "_id": "38180f51c83f9e2a053cb2c4",
+    "title": "Daily Reflections",
+    "entry": "Reflecting on the events of the day has become an essential part of my routine. It helps me grow and learn from my experiences.",
+    "student_id": "661a53cd704ab3e24c34c1f0",
+    "sentiment_score": [
+      {
+        "label": "admiration",
+        "score": 0.0018975713872535825
+      },
+      {
+        "label": "amusement",
+        "score": 0.00016914745153597748
+      },
+      {
+        "label": "anger",
+        "score": 0.000039618569297611356
+      },
+      {
+        "label": "annoyance",
+        "score": 0.00008147522783620602
+      },
+      {
+        "label": "approval",
+        "score": 0.00611688858285594
+      },
+      {
+        "label": "caring",
+        "score": 0.0016216129233534932
+      },
+      {
+        "label": "confusion",
+        "score": 0.00006147482666612484
+      },
+      {
+        "label": "curiosity",
+        "score": 0.002094420912295103
+      },
+      {
+        "label": "desire",
+        "score": 0.0009198795397917621
+      },
+      {
+        "label": "disappointment",
+        "score": 0.000046126012870123014
+      },
+      {
+        "label": "disapproval",
+        "score": 0.000046471840284049764
+      },
+      {
+        "label": "disgust",
+        "score": 0.00008732318363421082
+      },
+      {
+        "label": "embarrassment",
+        "score": 0.000031276975747051194
+      },
+      {
+        "label": "excitement",
+        "score": 0.9630944724082947
+      },
+      {
+        "label": "fear",
+        "score": 0.00013585010375415528
+      },
+      {
+        "label": "gratitude",
+        "score": 0.0006299402982591391
+      },
+      {
+        "label": "grief",
+        "score": 0.000013144938189950037
+      },
+      {
+        "label": "joy",
+        "score": 0.019662416756153107
+      },
+      {
+        "label": "love",
+        "score": 0.00009633656936686823
+      },
+      {
+        "label": "nervousness",
+        "score": 0.0003710661290013044
+      },
+      {
+        "label": "optimism",
+        "score": 0.002340879400551915
+      },
+      {
+        "label": "pride",
+        "score": 0.00008071634914304647
+      },
+      {
+        "label": "realization",
+        "score": 0.00011231667288965756
+      },
+      {
+        "label": "relief",
+        "score": 0.0002948487342438109
+      },
+      {
+        "label": "remorse",
+        "score": 0.00005670375964184088
+      },
+      {
+        "label": "sadness",
+        "score": 0.000029692032299374178
+      },
+      {
+        "label": "surprise",
+        "score": 0.00034262099647222495
+      },
+      {
+        "label": "neutral",
+        "score": 0.00021335111675031483
+      }
+    ],
+    "created_at": "2024-04-20T10:54:32.144000",
+    "updated_at": "2024-04-20T10:54:32.144000"
+  },
+  {
+    "_id": "a16ee0d946a57943eaa83ed6",
+    "title": "Daily Gratitude",
+    "entry": "Expressing gratitude for the little things in life brings so much joy. Today, I'm thankful for the support of my friends and family.",
+    "student_id": "661a53cd704ab3e24c34c1f0",
+    "sentiment_score": [
+      {
+        "label": "admiration",
+        "score": 0.0018992859760525222
+      },
+      {
+        "label": "amusement",
+        "score": 0.00016927460750991106
+      },
+      {
+        "label": "anger",
+        "score": 0.00003963138104215571
+      },
+      {
+        "label": "annoyance",
+        "score": 0.00008148655227713269
+      },
+      {
+        "label": "approval",
+        "score": 0.006117057029664755
+      },
+      {
+        "label": "caring",
+        "score": 0.0016216660265926728
+      },
+      {
+        "label": "confusion",
+        "score": 0.000061481152963489234
+      },
+      {
+        "label": "curiosity",
+        "score": 0.0020944954264161587
+      },
+      {
+        "label": "desire",
+        "score": 0.0009199038064143062
+      },
+      {
+        "label": "disappointment",
+        "score": 0.000046132855624809116
+      },
+      {
+        "label": "disapproval",
+        "score": 0.00004647854596707867
+      },
+      {
+        "label": "disgust",
+        "score": 0.00008733083997791216
+      },
+      {
+        "label": "embarrassment",
+        "score": 0.000031279924520914786
+      },
+      {
+        "label": "excitement",
+        "score": 0.9630944724082947
+      },
+      {
+        "label": "fear",
+        "score": 0.00013585312908072746
+      },
+      {
+        "label": "gratitude",
+        "score": 0.0006299484383534787
+      },
+      {
+        "label": "grief",
+        "score": 0.000013145123752667397
+      },
+      {
+        "label": "joy",
+        "score": 0.019662425100684166
+      },
+      {
+        "label": "love",
+        "score": 0.00009633703902759069
+      },
+      {
+        "label": "nervousness",
+        "score": 0.00037106842447437346
+      },
+      {
+        "label": "optimism",
+        "score": 0.0023408823834061623
+      },
+      {
+        "label": "pride",
+        "score": 0.00008071689268049237
+      },
+      {
+        "label": "realization",
+        "score": 0.00011231680064804858
+      },
+      {
+        "label": "relief",
+        "score": 0.0002948497795188129
+      },
+      {
+        "label": "remorse",
+        "score": 0.00005670395644734408
+      },
+      {
+        "label": "sadness",
+        "score": 0.0000296920671554236
+      },
+      {
+        "label": "surprise",
+        "score": 0.0003426212525263423
+      },
+      {
+        "label": "neutral",
+        "score": 0.00021335126581338072
+      }
+    ],
+    "created_at": "2024-04-21T11:45:07.981000",
+    "updated_at": "2024-04-21T11:45:07.981000"
+  },
+  {
+    "_id": "01fd4a461ae5e3c3567d998c",
+    "title": "Daily Positivity",
+    "entry": "Starting my day with a positive mindset sets the tone for everything else. Today, I'm choosing joy and optimism.",
+    "student_id": "661a53cd704ab3e24c34c1f0",
+    "sentiment_score": [
+      {
+        "label": "admiration",
+        "score": 0.0018992756191044455
+      },
+      {
+        "label": "amusement",
+        "score": 0.00016927037668911344
+      },
+      {
+        "label": "anger",
+        "score": 0.00003963090296011761
+      },
+      {
+        "label": "annoyance",
+        "score": 0.00008148559003940979
+      },
+      {
+        "label": "approval",
+        "score": 0.006117053140670538
+      },
+      {
+        "label": "caring",
+        "score": 0.0016216647443779707
+      },
+      {
+        "label": "confusion",
+        "score": 0.00006148077585307898
+      },
+      {
+        "label": "curiosity",
+        "score": 0.0020944922175107
+      },
+      {
+        "label": "desire",
+        "score": 0.0009199021561782067
+      },
+      {
+        "label": "disappointment",
+        "score": 0.000046132666835921585
+      },
+      {
+        "label": "disapproval",
+        "score": 0.000046478437808956444
+      },
+      {
+        "label": "disgust",
+        "score": 0.00008733073328574368
+      },
+      {
+        "label": "embarrassment",
+        "score": 0.000031279878644641995
+      },
+      {
+        "label": "excitement",
+        "score": 0.9630944724082947
+      },
+      {
+        "label": "fear",
+        "score": 0.00013585305057045007
+      },
+      {
+        "label": "gratitude",
+        "score": 0.0006299480552568736
+      },
+      {
+        "label": "grief",
+        "score": 0.000013145107638753418
+      },
+      {
+        "label": "joy",
+        "score": 0.019662425452947617
+      },
+      {
+        "label": "love",
+        "score": 0.00009633702075592422
+      },
+      {
+        "label": "nervousness",
+        "score": 0.00037106829763162124
+      },
+      {
+        "label": "optimism",
+        "score": 0.0023408820098934174
+      },
+      {
+        "label": "pride",
+        "score": 0.00008071687394331795
+      },
+      {
+        "label": "realization",
+        "score": 0.00011231678180603611
+      },
+      {
+        "label": "relief",
+        "score": 0.00029484975574813795
+      },
+      {
+        "label": "remorse",
+        "score": 0.000056703950042603254
+      },
+      {
+        "label": "sadness",
+        "score": 0.00002969206678605458
+      },
+      {
+        "label": "surprise",
+        "score": 0.00034262124204871035
+      },
+      {
+        "label": "neutral",
+        "score": 0.00021335126153767812
+      }
+    ],
+    "created_at": "2024-04-22T13:28:10.478000",
+    "updated_at": "2024-04-22T13:28:10.478000"
+  }
+]

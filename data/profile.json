@@ -1,0 +1,8 @@
+{
+  "data": {
+    "_id": 1234,
+    "firstName": "Test",
+    "lastName": "Student",
+    "email": "test@email.com"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "label": "Journal",
+      "url": "/journal"
+    },
+    {
+      "label": "Messages",
+      "url": "/messages"
+    },
+    {
+      "label": "Profile",
+      "url": "/profile"
+    }
+  ]
+}
