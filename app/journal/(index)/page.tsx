@@ -21,8 +21,8 @@ const JournalPage = () => {
           </Link>
           <Link href={`/journals`}>
             <Button
-              variant="ghost"
-              className="rounded-full border border-primary px-10 py-6 text-lg"
+              variant="outline"
+              className="rounded-full border border-primary/50 px-10 py-6 text-lg"
             >
               My Journals
             </Button>
