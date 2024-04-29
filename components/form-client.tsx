@@ -12,7 +12,7 @@ interface FormClientProps {
 }
 
 interface FormData {
-  username: string;
+  userName: string;
   email: string;
   password: string;
   firstName?: string;
@@ -27,7 +27,7 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
     password: "",
     firstName: "",
     lastName: "",
-    username: "",
+    userName: "",
     course: "",
     year: "",
   });
@@ -47,12 +47,12 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
         try {
           const loginResponse = await login(formData.email, formData.password);
           console.log("Login Success:", loginResponse);
-          router.push("/students");
+          router.push("/journal");
         } catch (error) {}
       } else if (name === "register") {
         const registerResponse = await register(formData);
         console.log("Register Success:", registerResponse);
-        router.push("/students");
+        router.push("/journal");
       }
     } catch (error) {
       console.error("Error:", error || "Unknown Error");
@@ -85,11 +85,11 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
           </>
         ) : (
           <>
-            <Label htmlFor="username">Username</Label>
+            <Label htmlFor="userName">userName</Label>
             <Input
               type="text"
-              name="username"
-              value={formData.username}
+              name="userName"
+              value={formData.userName}
               onChange={handleChange}
               required
               className="p-2 px-3"

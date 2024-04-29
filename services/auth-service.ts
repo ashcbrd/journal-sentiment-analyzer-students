@@ -30,7 +30,7 @@ export const register = async (userData: UserData): Promise<ApiResponse> => {
     // NOTE: used axios instance in the request
     const response = await axiosInstance.post<ApiResponse>(
       // NOTE: removed baseURL
-      `/student/register`,
+      "/student/register",
       userData
     );
     Cookie.set("student-token", response.data._id);
@@ -48,7 +48,7 @@ export const login = async (
     // NOTE: used axios instance in the resuest
     const response = await axiosInstance.post<ApiResponse>(
       // NOTE: removed base url
-      `/student/login`,
+      "/student/login",
       { email, password }
     );
 
