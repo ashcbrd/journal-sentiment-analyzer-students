@@ -43,7 +43,7 @@ const JournalsPage = () => {
   return (
     <div>
       <div className="w-full grid grid-cols-3 gap-10">
-        {journals &&
+        {journals ? (
           journals.map((journal, index) => (
             <Link href={`/journal/${journal._id}`} key={index}>
               <Card className="hover:bg-zinc-50">
@@ -55,7 +55,16 @@ const JournalsPage = () => {
                 </CardHeader>
               </Card>
             </Link>
-          ))}
+          ))
+        ) : (
+          <h2 className="font-md text-xl text-center">
+            No journals Yet. Click{" "}
+            <Link href={"/journal/create"} className="underline">
+              here
+            </Link>{" "}
+            to create journal.
+          </h2>
+        )}
       </div>
     </div>
   );
