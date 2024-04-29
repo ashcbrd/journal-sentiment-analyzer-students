@@ -1,21 +1,62 @@
+"use client";
+
 import Link from "next/link";
+import { usePublicRouteRedirect } from "@/hooks/use-auth-redirection";
+
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import journals from "../../data/journals.json";
+import { axiosInstance } from "@/lib/utils";
+import { useUser } from "@/context/user-context";
+import { useEffect, useState } from "react";
+
+function getData(id?: string) {
+  const response = axiosInstance
+    .get(`/journal/student/${id}`, {})
+    .then((response) => {
+      let result = response;
+      return result;
+    })
+    .catch((error) => {
+      console.log("Error", error);
+    });
+
+  return response;
+}
 
 const JournalsPage = () => {
-  const journalsData = journals.data;
+  const { user } = useUser();
+  const [journals, setJournals] = useState(null);
+
+  useEffect(() => {
+    getData(user._id).then((data) => {
+      setJournals(data);
+    });
+  }, []);
+
+  usePublicRouteRedirect();
 
   return (
-    <div className="grid grid-cols-4 gap-4 p-10">
-      {journalsData.map((journal, index) => (
-        <Link
-          href={`/journal/${journal._id}`}
-          className="p-4 bg-secondary rounded-lg border w-[300px] shadow-md shadow-zinc-200/50 cursor-pointer hover:bg-zinc-200/70"
-          key={index}
-        >
-          <h3 className="font-semibold text-2xl">{journal.title}</h3>
-          <p className="truncate text-primary/70">{journal.entry}</p>
-        </Link>
-      ))}
+    <div>
+      <div className="w-full grid grid-cols-3 gap-10">
+        {journals &&
+          journals.map((journal, index) => (
+            <Link href={`/journal/${journal._id}`} key={index}>
+              <Card className="hover:bg-zinc-50">
+                <CardHeader>
+                  <CardTitle>{journal.title}</CardTitle>
+                  <CardDescription className="truncate">
+                    {journal.entry}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
+          ))}
+      </div>
     </div>
   );
 };

@@ -1,14 +1,19 @@
+"use client";
+
 import Link from "next/link";
 import profile from "../../../data/profile.json";
 import { Button } from "@/components/ui/button";
+import { useUser } from "@/context/user-context";
+import { usePublicRouteRedirect } from "@/hooks/use-auth-redirection";
 
 const JournalPage = () => {
-  const profileData = profile.data;
+  const { user } = useUser();
+  usePublicRouteRedirect();
   return (
     <div className="w-full h-screen flex items-center justify-center">
       <div className="flex flex-col gap-y-4 items-center">
         <h2 className="text-6xl font-bold">
-          Welcome, {profileData.firstName}!
+          Welcome, {user.userName ? user.userName : user.firstName}!
         </h2>
         <p className="text-primary/80 text-xl">
           Ready to jot down or revisit your journal? Let&apos;s start!

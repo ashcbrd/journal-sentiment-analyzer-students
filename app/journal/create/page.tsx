@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,6 +16,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import BackgroundPattern from "@/components/background-pattern";
+import { useUser } from "@/context/user-context";
+import { axiosInstance } from "@/lib/utils";
 
 interface journalData {
   title: string;
@@ -22,13 +25,34 @@ interface journalData {
 }
 
 const CreateJournalPage = () => {
+  const { user } = useUser();
   const router = useRouter();
   const [journalData, setJournalData] = useState<journalData>({
     title: "",
     journalEntry: "",
   });
+  const { toast } = useToast();
 
-  console.log(journalData);
+  const handleSubmit = async () => {
+    try {
+      const response = await axiosInstance.post("/journal", {
+        ...journalData,
+        _id: user._id,
+      });
+      console.log(response.data);
+      toast({
+        variant: "default",
+        description: "Journal Created!",
+      });
+      router.push(`journal/${response.data._id}`);
+    } catch (error) {
+      console.error("Error submitting journal:", error);
+      toast({
+        variant: "destructive",
+        description: "Error submitting journal. Please try again.",
+      });
+    }
+  };
 
   return (
     <div className="w-full h-screen flex items-center justify-center">
@@ -62,7 +86,12 @@ const CreateJournalPage = () => {
             />
           </div>
           <div className="w-full flex justify-between">
-            <Button className="min-w-[244px] rounded-full">Submit</Button>
+            <Button
+              onClick={handleSubmit}
+              className="min-w-[244px] rounded-full"
+            >
+              Submit
+            </Button>
             {journalData.title || journalData.journalEntry ? (
               <Dialog>
                 <DialogTrigger>
