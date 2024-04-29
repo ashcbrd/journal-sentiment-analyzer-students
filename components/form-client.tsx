@@ -6,7 +6,6 @@ import { register, login } from "../services/auth-service";
 import { Label } from "./ui/label";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import Cookie from "js-cookie";
 
 interface FormClientProps {
   name: string;
@@ -18,6 +17,8 @@ interface FormData {
   password: string;
   firstName?: string;
   lastName?: string;
+  course: string;
+  year: string;
 }
 
 const FormClient: React.FC<FormClientProps> = ({ name }) => {
@@ -27,6 +28,8 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
     firstName: "",
     lastName: "",
     username: "",
+    course: "",
+    year: "",
   });
   const [error, setError] = useState(null);
   const router = useRouter();
@@ -97,7 +100,6 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              required
               className="p-2 px-3"
             />
             <Label htmlFor="lastName">Last Name</Label>
@@ -106,7 +108,6 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              required
               className="p-2 px-3"
             />
             <Label htmlFor="email">Email</Label>
@@ -127,6 +128,30 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
               required
               className="p-2 px-3"
             />
+            <div className="flex gap-x-4">
+              <div>
+                <Label htmlFor="email">Course</Label>
+                <Input
+                  type="text"
+                  name="course"
+                  value={formData.course}
+                  onChange={handleChange}
+                  required
+                  className="p-2 px-3 mt-2"
+                />
+              </div>
+              <div>
+                <Label htmlFor="email">Year</Label>
+                <Input
+                  type="text"
+                  name="year"
+                  value={formData.year}
+                  onChange={handleChange}
+                  required
+                  className="p-2 px-3 mt-2"
+                />
+              </div>
+            </div>
           </>
         )}
         <Button type="submit" className="w-full mt-6 capitalize text-md">
