@@ -39,8 +39,6 @@ export default function JournalPage({ params }: { params: { slug: string } }) {
   const [journal, setJournal] = useState(null);
   const router = useRouter();
 
-  const sample = response.data.find((item) => item._id === params);
-
   useEffect(() => {
     getData(params.slug).then((data) => {
       console.log(data);
@@ -89,7 +87,7 @@ export default function JournalPage({ params }: { params: { slug: string } }) {
               </DialogDescription>
             </DialogHeader>
             <Button
-              onClick={handleDeleteJournal(params.slug)}
+              onClick={() => handleDeleteJournal(params.slug)}
               className="w-max ml-auto"
             >
               Delete Journal
@@ -99,12 +97,12 @@ export default function JournalPage({ params }: { params: { slug: string } }) {
       </div>
       <div className="flex flex-col w-full mt-10">
         <div className="flex w-full justify-between items-center">
-          <h2 className="font-semibold text-4xl">{sample?.title}</h2>
-          <Link href={`/message/student/${sample?.student_id}`}>
+          <h2 className="font-semibold text-4xl">{journal?.title}</h2>
+          <Link href={`/message/student/${journal?.student_id}`}>
             <Button className="px-10">Message</Button>
           </Link>
         </div>
-        <p className="mt-4">{sample?.entry}</p>
+        <p className="mt-4">{journal?.entry}</p>
       </div>
       {/* @ts-ignore */}
       <JournalClient sentiments={sample?.sentiment_score} />
