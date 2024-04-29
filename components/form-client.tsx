@@ -47,12 +47,12 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
         try {
           const loginResponse = await login(formData.email, formData.password);
           console.log("Login Success:", loginResponse);
-          router.push("/students");
+          router.push("/journal");
         } catch (error) {}
       } else if (name === "register") {
         const registerResponse = await register(formData);
         console.log("Register Success:", registerResponse);
-        router.push("/students");
+        router.push("/journal");
       }
     } catch (error) {
       console.error("Error:", error || "Unknown Error");
