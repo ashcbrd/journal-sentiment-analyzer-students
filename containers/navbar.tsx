@@ -23,7 +23,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const { logout } = useUser();
 
-  const [isAtTop, setIsAtTop] = useState<boolean>(window.scrollY === 0);
+  const [isAtTop, setIsAtTop] = useState<boolean>(true);
 
   useEffect(() => {
     const handleScroll = (): void => {
