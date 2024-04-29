@@ -94,7 +94,9 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
               required
               className="p-2 px-3"
             />
-            <Label htmlFor="firstName">First Name</Label>
+            <Label htmlFor="firstName">
+              First Name <span className="text-primary/50">(optional)</span>
+            </Label>
             <Input
               type="text"
               name="firstName"
@@ -102,7 +104,9 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
               onChange={handleChange}
               className="p-2 px-3"
             />
-            <Label htmlFor="lastName">Last Name</Label>
+            <Label htmlFor="lastName">
+              Last Name <span className="text-primary/50">(optional)</span>
+            </Label>
             <Input
               type="text"
               name="lastName"
