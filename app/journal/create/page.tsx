@@ -44,7 +44,7 @@ const CreateJournalPage = () => {
         variant: "default",
         description: "Journal Created!",
       });
-      router.push(`journal/${response.data._id}`);
+      router.push(`/${response.data._id}`);
     } catch (error) {
       console.error("Error submitting journal:", error);
       toast({
