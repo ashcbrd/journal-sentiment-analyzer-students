@@ -9,7 +9,6 @@ interface UserData {
   userName?: string;
   firstName?: string;
   lastName?: string;
-
   course: string;
   year: string;
 }
