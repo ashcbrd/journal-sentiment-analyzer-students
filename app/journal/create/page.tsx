@@ -21,7 +21,7 @@ import { axiosInstance } from "@/lib/utils";
 
 interface journalData {
   title: string;
-  journalEntry: string;
+  entry: string;
 }
 
 const CreateJournalPage = () => {
@@ -29,7 +29,7 @@ const CreateJournalPage = () => {
   const router = useRouter();
   const [journalData, setJournalData] = useState<journalData>({
     title: "",
-    journalEntry: "",
+    entry: "",
   });
   const { toast } = useToast();
 
@@ -37,7 +37,7 @@ const CreateJournalPage = () => {
     try {
       const response = await axiosInstance.post("/journal", {
         ...journalData,
-        _id: user._id,
+        student_id: user._id,
       });
       console.log(response.data);
       toast({
@@ -76,11 +76,11 @@ const CreateJournalPage = () => {
             </label>
             <Textarea
               className="h-full"
-              value={journalData.journalEntry}
+              value={journalData.entry}
               onChange={(e) =>
                 setJournalData({
                   ...journalData,
-                  journalEntry: e.target.value,
+                  entry: e.target.value,
                 })
               }
             />
@@ -92,7 +92,7 @@ const CreateJournalPage = () => {
             >
               Submit
             </Button>
-            {journalData.title || journalData.journalEntry ? (
+            {journalData.title || journalData.entry ? (
               <Dialog>
                 <DialogTrigger>
                   <Button
