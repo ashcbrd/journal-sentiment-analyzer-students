@@ -71,10 +71,9 @@ const Navbar = () => {
           );
         })}
       </ul>
-      <Button variant="ghost" className="absolute right-8 top-8 m-auto">
         <Dialog>
           <DialogTrigger>
-            <RiLogoutCircleRFill size={30} />
+            <RiLogoutCircleRFill size={30} className="absolute right-8 top-8 m-auto" />
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
@@ -85,7 +84,6 @@ const Navbar = () => {
             </Button>
           </DialogContent>
         </Dialog>
-      </Button>
     </nav>
   );
 };
