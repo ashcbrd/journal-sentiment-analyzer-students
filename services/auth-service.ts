@@ -30,7 +30,7 @@ export const register = async (userData: UserData): Promise<ApiResponse> => {
       `/student/register`,
       userData
     );
-    Cookie.set("token", response.data._id);
+    Cookie.set("student-token", response.data._id);
     return response.data;
   } catch (error: any) {
     throw error.response.data;
@@ -49,7 +49,7 @@ export const login = async (
       { email, password }
     );
 
-    Cookie.set("token", response.data._id);
+    Cookie.set("student-token", response.data._id);
     console.log("response", response.data);
     return response.data;
   } catch (error: any) {

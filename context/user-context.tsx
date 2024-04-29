@@ -27,7 +27,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
   const logout = () => {
     setUser({});
-    Cookie.remove("token");
+    Cookie.remove("student-token");
     router.push("/");
   };
 
