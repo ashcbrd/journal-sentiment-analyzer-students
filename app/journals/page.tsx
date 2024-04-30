@@ -33,8 +33,9 @@ const JournalsPage = () => {
   const [journals, setJournals] = useState(null);
 
   useEffect(() => {
+    console.log("userid: ", user._id)
     getData(user._id).then((data) => {
-      setJournals(data);
+      setJournals(data?.data);
     });
   }, []);
 
