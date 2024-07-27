@@ -7,6 +7,8 @@ import { Label } from "./ui/label";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { useUser } from "@/context/user-context";
+import { json } from "stream/consumers";
+import { useToast } from "./ui/use-toast";
 
 interface FormClientProps {
   name: string;
@@ -36,6 +38,8 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
   const router = useRouter();
   const {setUser} = useUser()
 
+  const {toast} = useToast()
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log("api base url:  ", process.env.BASE_API_URL);
     const { name, value } = e.target;
@@ -49,17 +53,36 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
         try {
           const loginResponse = await login(formData.email, formData.password);
           console.log("Login Success:", loginResponse);
+          localStorage.setItem('studentUser', JSON.stringify(loginResponse))
           setUser(loginResponse)
           router.push("/journal");
-        } catch (error) {}
+          toast({
+            variant: "default",
+            description: "Login successful",
+          });
+        } catch (error) {
+          toast({
+            variant: "destructive",
+            description: "Invalid credentials.",
+          });
+        }
       } else if (name === "register") {
         const registerResponse = await register(formData);
         setUser(registerResponse)
-        console.log("Register Success:", registerResponse);
+        console.log("Register success:", registerResponse);
+        localStorage.setItem('studentUser', JSON.stringify(registerResponse))
         router.push("/journal");
+        toast({
+          variant: "default",
+          description: "Registration successful",
+        });
       }
     } catch (error) {
       console.error("Error:", error || "Unknown Error");
+      toast({
+        variant: "destructive",
+        description: "Registration failed. Please try again.",
+      });
     }
   };
 

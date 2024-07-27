@@ -1,14 +1,19 @@
+import PageHeader from "@/components/page-header";
 import Navbar from "@/containers/navbar";
 
-export default function MessagesageLayout({
+export default function JournalsPageLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <Navbar />
-      {children}
-    </div>
+    <>
+    <Navbar/>
+      <div className="px-10 py-4 h-screen mt-20">
+
+        <PageHeader>Messages</PageHeader>
+        <div>{children}</div>
+      </div>
+    </>
   );
 }

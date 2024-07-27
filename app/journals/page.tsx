@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import journals from "../../data/journals.json";
 import { axiosInstance } from "@/lib/utils";
 import { useUser } from "@/context/user-context";
 import { useEffect, useState } from "react";
@@ -29,7 +28,8 @@ function getData(id?: string) {
 }
 
 const JournalsPage = () => {
-  const { user } = useUser();
+  // const { user } = useUser();
+  const user = JSON.parse(localStorage.getItem('studentUser')!)
   const [journals, setJournals] = useState(null);
 
   useEffect(() => {
@@ -41,10 +41,13 @@ const JournalsPage = () => {
 
   usePublicRouteRedirect();
 
+  console.log(journals)
+
   return (
     <div>
       <div className="w-full grid grid-cols-3 gap-10">
         {journals ? (
+          // @ts-ignore
           journals.map((journal, index) => (
             <Link href={`/journal/${journal._id}`} key={index}>
               <Card className="hover:bg-zinc-50">

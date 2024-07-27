@@ -25,7 +25,8 @@ interface journalData {
 }
 
 const CreateJournalPage = () => {
-  const { user } = useUser();
+  // const { user } = useUser();
+  const user = JSON.parse(localStorage.getItem('studentUser')!)
   const router = useRouter();
   const [journalData, setJournalData] = useState<journalData>({
     title: "",

@@ -29,6 +29,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     setUser({});
     Cookie.remove("student-token");
     router.push("/");
+    localStorage.removeItem('studentUser')
   };
 
   return (

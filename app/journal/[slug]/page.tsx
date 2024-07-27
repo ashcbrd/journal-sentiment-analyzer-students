@@ -42,9 +42,10 @@ export default function JournalPage({ params }: { params: { slug: string } }) {
   useEffect(() => {
     getData(params.slug).then((data) => {
       console.log(data);
+      // @ts-ignore
       setJournal(data.data);
     });
-  }, []);
+  }, [params.slug]);
 
   usePublicRouteRedirect();
 
@@ -97,11 +98,10 @@ export default function JournalPage({ params }: { params: { slug: string } }) {
       </div>
       <div className="flex flex-col w-full mt-10">
         <div className="flex w-full justify-between items-center">
+          {/* @ts-ignore */}
           <h2 className="font-semibold text-4xl">{journal?.title}</h2>
-          <Link href={`/message/student/${journal?.student_id}`}>
-            <Button className="px-10">Message</Button>
-          </Link>
         </div>
+        {/* @ts-ignore */}
         <p className="mt-4">{journal?.entry}</p>
       </div>
       {/* @ts-ignore */}
