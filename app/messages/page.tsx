@@ -81,7 +81,9 @@ const ChatPage = () => {
                   <p className="">{admin.firstName[0]}</p>
                 </Avatar>
               </Link>
-              <p className="w-max">{admin.firtName} {admin.lastName}</p>
+              <p className="w-max">
+                {admin.firstName} {admin.lastName}
+              </p>
             </div>
           ))}
       </div>

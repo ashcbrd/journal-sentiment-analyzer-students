@@ -8,22 +8,20 @@ import { Button, ButtonProps } from "./ui/button";
 const BackButtonClient = ({
   className,
   variant,
-  prevPage = false
+  prevPage = false,
 }: {
   className?: string;
   variant?: ButtonProps["variant"];
-  prevPage?: boolean
+  prevPage?: boolean;
 }) => {
   const router = useRouter();
 
   return (
-    <Button onClick={() => {
-      if(prevPage) {
-        router.back()
-      } else {
-        router.push('/journal')
-      }
-    }} variant={variant} className={className}>
+    <Button
+      onClick={() => router.back()}
+      variant={variant}
+      className={className}
+    >
       <ArrowLeftIcon />
     </Button>
   );

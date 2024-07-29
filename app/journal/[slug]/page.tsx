@@ -74,7 +74,7 @@ export default function JournalPage({ params }: { params: { slug: string } }) {
         <Dialog>
           <DialogTrigger>
             <Button variant="outline" className="py-6">
-              <MdDelete size={30} />
+              <MdDelete size={30} className="text-[#1d425d]" />
             </Button>
           </DialogTrigger>
           <DialogContent>

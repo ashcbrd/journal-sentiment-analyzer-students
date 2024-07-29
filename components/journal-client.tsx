@@ -36,8 +36,8 @@ const JournalClient = ({ sentiments }: { sentiments: SentimentProps }) => {
             onClick={() => setLayout("chart")}
             className={`cursor-pointer p-2 ${
               layout === "chart"
-                ? "bg-primary text-secondary  rounded-md"
-                : "bg-none text-zinc-800"
+                ? "bg-[#1d425d] text-secondary  rounded-md"
+                : "bg-none text-[#1d425d]"
             }`}
           />
           <FaTable
@@ -45,8 +45,8 @@ const JournalClient = ({ sentiments }: { sentiments: SentimentProps }) => {
             size={40}
             className={`cursor-pointer p-2 ${
               layout === "table"
-                ? "bg-primary text-secondary  rounded-md"
-                : "bg-none text-zinc-800"
+                ? "bg-[#1d425d] text-secondary  rounded-md"
+                : "bg-none text-[#1d425d]"
             }`}
           />
         </div>
@@ -68,7 +68,7 @@ const SentimentBarChart: React.FC<SentimentProps> = ({ sentiments }) => {
   const maxValue = Math.max(...sentiments.map((sentiment) => sentiment.score));
 
   return (
-    <div className="flex flex-col gap-y-2 items-center justify-center space-y-2 bg-secondary rounded p-4 border bg-white">
+    <div className="flex flex-col gap-y-2 items-center justify-center space-y-2 bg-secondary rounded p-10 border bg-white">
       {sentiments.map((sentiment, index) => (
         <div key={index} className="w-full flex items-center gap-x-4">
           <span className="min-w-32 capitalize font-medium">
@@ -76,7 +76,7 @@ const SentimentBarChart: React.FC<SentimentProps> = ({ sentiments }) => {
           </span>
           <div
             style={{ width: `${(sentiment.score / maxValue) * 100}%` }}
-            className="h-4 bg-blue-500 transition-all rounded duration-300 ml-4"
+            className="h-4 bg-[#1d425d] transition-all rounded duration-300 ml-4"
             title={`Score: ${sentiment.score}`}
           />
           <span className="text-xs">{sentiment.score}</span>
@@ -111,11 +111,14 @@ const SentimentScoreTable: React.FC<SentimentProps> = ({ sentiments }) => {
       {sliceNumbers.map((item, index) => (
         <Table key={index} className="border bg-white">
           <TableHeader>
-            <TableRow className="bg-zinc-200">
+            <TableRow className="bg-[#1d425d] hover:bg-[#1d425d]">
               {sentiments
                 .slice(item.first, item.second)
                 .map((sentiment, index) => (
-                  <TableHead key={index} className="capitalize font-md">
+                  <TableHead
+                    key={index}
+                    className="capitalize font-md text-white"
+                  >
                     {sentiment.label}
                   </TableHead>
                 ))}

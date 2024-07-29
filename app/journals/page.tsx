@@ -46,7 +46,7 @@ const JournalsPage = () => {
   return (
     <div>
       <div className="w-full grid grid-cols-3 gap-10">
-        {journals ? (
+        {journals && journals?.length ? (
           // @ts-ignore
           journals.map((journal, index) => (
             <Link href={`/journal/${journal._id}`} key={index}>
