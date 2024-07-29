@@ -29,11 +29,11 @@ function getData(id?: string) {
 
 const JournalsPage = () => {
   // const { user } = useUser();
-  const user = JSON.parse(localStorage.getItem('studentUser')!)
+  const user = JSON.parse(localStorage.getItem("studentUser")!);
   const [journals, setJournals] = useState(null);
 
   useEffect(() => {
-    console.log("userid: ", user._id)
+    console.log("userid: ", user._id);
     getData(user._id).then((data) => {
       setJournals(data?.data);
     });
@@ -41,7 +41,7 @@ const JournalsPage = () => {
 
   usePublicRouteRedirect();
 
-  console.log(journals)
+  console.log(journals);
 
   return (
     <div>
@@ -52,7 +52,19 @@ const JournalsPage = () => {
             <Link href={`/journal/${journal._id}`} key={index}>
               <Card className="hover:bg-zinc-50">
                 <CardHeader>
-                  <CardTitle>{journal.title}</CardTitle>
+                  <CardTitle className="flex gap-x-4 items-center">
+                    <p className="truncate">{journal.title}</p>
+                    <span className="text-sm text-zinc-600 font-[500] bg-zinc-200 px-3 py-1 rounded-md min-w-max">
+                      {new Date(journal.created_at).toLocaleDateString(
+                        "en-US",
+                        {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        }
+                      )}
+                    </span>
+                  </CardTitle>
                   <CardDescription className="truncate">
                     {journal.entry}
                   </CardDescription>

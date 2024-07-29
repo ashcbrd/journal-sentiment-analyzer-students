@@ -7,7 +7,7 @@ export function usePrivateRouteRedirect() {
   const isAuthenticated = checkAuth();
   useEffect(() => {
     if (isAuthenticated) {
-      router.push("/students");
+      router.push("/journal");
     }
   }, [router, isAuthenticated]);
 }

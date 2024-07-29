@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 
@@ -7,16 +7,14 @@ import { Button } from "@/components/ui/button";
 import { usePublicRouteRedirect } from "@/hooks/use-auth-redirection";
 
 const JournalPage = () => {
-
-
-  const user = JSON.parse(localStorage.getItem('studentUser')!)
+  const user = JSON.parse(localStorage.getItem("studentUser")!);
 
   usePublicRouteRedirect();
   return (
     <div className="w-full h-screen flex items-center justify-center">
       <div className="flex flex-col gap-y-4 items-center">
-        <h2 className="text-6xl font-bold">
-          Welcome, {user?.userName ? user?.userName : user?.firstName}!
+        <h2 className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-tr from-[#132b3e] to-[#2474a5]">
+          Hi there, {user?.userName ? user?.userName : user?.firstName}!
         </h2>
         <p className="text-primary/80 text-xl">
           Ready to jot down or revisit your journal? Let&apos;s start!

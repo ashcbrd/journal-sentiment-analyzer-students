@@ -17,63 +17,42 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useUser } from "@/context/user-context";
+import { Avatar } from "@/components/ui/avatar";
 
 const Navbar = () => {
   const navbarData = navbar.data;
   const pathname = usePathname();
   const { logout } = useUser();
 
-  const [isAtTop, setIsAtTop] = useState<boolean>(true);
-
-  useEffect(() => {
-    const handleScroll = (): void => {
-      setIsAtTop(window.scrollY === 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <nav className="flex justify-center">
-      <ul
-        className={`transition-all fixed flex items-center mt-6 text-primary text-lg p-2 justify-between overflow-hidden ${
-          isAtTop
-            ? "w-[600px]"
-            : "w-[400px] text-sm border rounded-full bg-secondary border-zinc-200 shadow-md mt-[40px]"
-        }`}
-      >
-        {navbarData.map((item, index) => {
-          const isActive = pathname === item.url;
-          return (
-            <li key={index} className="relative w-max py-2">
-              <Link
-                className={`relative px-8 z-50 ${
-                  isActive ? "text-secondary" : "text-primary"
-                }`}
-                href={item.url}
-              >
-                {item.label}
-              </Link>
-              {isActive && (
-                <motion.div
-                  layout
-                  layoutId="nav-active"
-                  className={`absolute bg-primary w-full h-full top-0 rounded-full z-10 ${
-                    isAtTop ? "" : ""
+    <nav className="fixed h-20 w-full  border-b shadow-md shadow-gray-300/70 backdrop-blur-md top-0 flex items-center justify-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
+        <Link href="/journal">
+          <h2 className="font-bold text-lg">LOGO HERE</h2>
+        </Link>
+        <ul className="relative flex items-center text-primary text-lg p-2 justify-center overflow-hidden">
+          {navbarData.map((item, index) => {
+            const isActive = pathname === item.url;
+            return (
+              <li key={index}>
+                <Link
+                  className={`relative px-8 z-50 ${
+                    isActive ? "font-bold" : ""
                   }`}
-                />
-              )}
-            </li>
-          );
-        })}
-      </ul>
+                  href={item.url}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
         <Dialog>
           <DialogTrigger>
-            <RiLogoutCircleRFill size={30} className="absolute right-8 top-8 m-auto" />
+            <Button variant="secondary" className="flex gap-x-2">
+              <p>Logout</p>
+              <RiLogoutCircleRFill />
+            </Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
@@ -84,6 +63,7 @@ const Navbar = () => {
             </Button>
           </DialogContent>
         </Dialog>
+      </div>
     </nav>
   );
 };

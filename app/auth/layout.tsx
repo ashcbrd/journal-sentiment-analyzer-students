@@ -10,7 +10,6 @@ export default function AuthLayout({
       <div className="w-full h-full flex justify-center items-center py-20 z-10">
         {children}
       </div>
-      <BackgroundPattern />
     </div>
   );
 }

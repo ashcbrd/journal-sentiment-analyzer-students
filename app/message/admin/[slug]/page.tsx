@@ -18,7 +18,11 @@ async function getAdmins() {
   }
 }
 
-export default function SingleChatPage({ params }: { params: { slug: string } }) {
+export default function SingleChatPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [messages, setMessages] = useState<any[]>([]);
   const [messageInput, setMessageInput] = useState("");
@@ -52,8 +56,6 @@ export default function SingleChatPage({ params }: { params: { slug: string } })
       `ws://127.0.0.1:8000/message/ws/${user._id}`
     );
 
-    
-
     socketInstance.onopen = () => {
       console.log("WebSocket connection established.");
       setIsSocketConnected(true);
@@ -72,7 +74,6 @@ export default function SingleChatPage({ params }: { params: { slug: string } })
         setMessages((prevMessages) => [...prevMessages, data]);
       }
     };
-    
 
     socketInstance.onerror = (error) => {
       console.error("WebSocket error: ", error);
@@ -119,7 +120,9 @@ export default function SingleChatPage({ params }: { params: { slug: string } })
     <div className="w-full h-full">
       <div className="flex gap-x-6 items-center">
         <BackButtonClient variant="outline" prevPage />
-        <h3 className="font-semibold text-3xl">{admin?.firstName} {admin?.lastName}</h3>
+        <h3 className="font-bold text-3xl">
+          {admin?.firstName} {admin?.lastName}
+        </h3>
       </div>
       <div className="w-full h-full rounded-lg bg-white mt-10 max-h-[80%] px-10 py-4 flex flex-col overflow-y-scroll">
         <div className="h-max">
@@ -127,12 +130,16 @@ export default function SingleChatPage({ params }: { params: { slug: string } })
             messages.map((message, index) => (
               <div key={index}>
                 <motion.div
-                  initial={{ x: message.sender_type === "student" ? 150 : -150, scale: 0, opacity: 0 }}
+                  initial={{
+                    x: message.sender_type === "student" ? 150 : -150,
+                    scale: 0,
+                    opacity: 0,
+                  }}
                   animate={{ x: 0, scale: 1, opacity: 1 }}
                   transition={{ type: "spring", stiffness: 80 }}
                   className={`${
                     message.sender_type === "student"
-                      ? "bg-primary text-white ml-auto"
+                      ? "bg-gradient-to-tr from-[#132b3e] to-[#2474a5] text-white ml-auto"
                       : "mr-auto border border-zinc-300 text-zinc-600"
                   }  rounded-3xl shadow-sm h-max w-max max-w-[400px] px-4 py-2 my-4 mt-auto relative`}
                 >

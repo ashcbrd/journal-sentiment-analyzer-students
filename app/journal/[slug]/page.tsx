@@ -96,13 +96,14 @@ export default function JournalPage({ params }: { params: { slug: string } }) {
           </DialogContent>
         </Dialog>
       </div>
-      <div className="flex flex-col w-full mt-10">
+      <div className="flex flex-col w-full mt-10 bg-white rounded-lg">
         <div className="flex w-full justify-between items-center">
           {/* @ts-ignore */}
-          <h2 className="font-semibold text-4xl">{journal?.title}</h2>
+          <h2 className="font-semibold text-4xl p-4">{journal?.title}</h2>
         </div>
+        <hr />
         {/* @ts-ignore */}
-        <p className="mt-4">{journal?.entry}</p>
+        <p className="p-4">{journal?.entry}</p>
       </div>
       {/* @ts-ignore */}
       <JournalClient sentiments={journal?.sentiment_score} />
