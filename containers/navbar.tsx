@@ -49,7 +49,7 @@ const Navbar = () => {
         </ul>
         <Dialog>
           <DialogTrigger>
-            <Button variant="secondary" className="flex gap-x-2">
+            <Button className="flex gap-x-2">
               <p>Logout</p>
               <RiLogoutCircleRFill />
             </Button>

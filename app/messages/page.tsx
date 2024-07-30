@@ -68,17 +68,19 @@ const ChatPage = () => {
 
   return (
     <div className="flex flex-col gap-y-4 px-4">
-      <div className="flex gap-x-10 mb-20 overflow-x-scroll">
+      <div className="flex gap-x-10 mb-20 overflow-x-scroll pb-6">
         {admins &&
           admins.map((admin, index) => (
             <div key={index} className="flex flex-col items-center gap-y-2">
               <Link
                 key={index}
                 href={`/message/admin/${admin._id}`}
-                className="rounded-full bg-zinc-300 border border-blue-300 w-16 h-16 flex items-center justify-center"
+                className="group rounded-full  bg-[#1d425d] border-4 border-zinc-400 w-16 h-16 flex items-center justify-center"
               >
                 <Avatar className="flex uppercase font-semibold items-center justify-center">
-                  <p className="">{admin.firstName[0]}</p>
+                  <p className="text-white group-hover:text-2xl transition-all">
+                    {admin.firstName[0]}
+                  </p>
                 </Avatar>
               </Link>
               <p className="w-max">
@@ -92,11 +94,11 @@ const ChatPage = () => {
         <div className="flex flex-col gap-y-4">
           {sortedConvos.map((item, index) => (
             <Link href={`/message/admin/${item.receiver_id}`} key={index}>
-              <Card className="flex gap-x-4 items-center px-6 py-4">
+              <Card className="flex gap-x-4 items-center pl-6 pr-20 py-4 relative">
                 <Avatar className="bg-zinc-100 border flex items-center justify-center">
                   <p className="uppercase">{item.receiver_name[0]}</p>
                 </Avatar>
-                <div className="w-max flex flex-col gap-y-2">
+                <div className="w-full flex flex-col gap-y-2 relative">
                   <CardTitle className="flex items-center gap-x-4">
                     {item.receiver_name}
                     <p className="text-sm text-zinc-600 font-[400] bg-zinc-100 rounded px-3 py-1">
@@ -108,7 +110,7 @@ const ChatPage = () => {
                     </p>
                   </CardTitle>
                   <CardDescription>
-                    <p className="text-md">{item.message}</p>
+                    <p className="text-md truncate relative">{item.message}</p>
                   </CardDescription>
                 </div>
               </Card>

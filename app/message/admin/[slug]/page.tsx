@@ -7,6 +7,7 @@ import BackButtonClient from "@/components/back-button-client";
 import { Input } from "@/components/ui/input";
 import { usePublicRouteRedirect } from "@/hooks/use-auth-redirection";
 import { axiosInstance } from "@/lib/utils";
+import { Avatar } from "@/components/ui/avatar";
 
 async function getAdmins() {
   try {
@@ -128,24 +129,62 @@ export default function SingleChatPage({
         <div className="h-max">
           {messages &&
             messages.map((message, index) => (
-              <div key={index}>
-                <motion.div
-                  initial={{
-                    x: message.sender_type === "student" ? 150 : -150,
-                    scale: 0,
-                    opacity: 0,
-                  }}
-                  animate={{ x: 0, scale: 1, opacity: 1 }}
-                  transition={{ type: "spring", stiffness: 80 }}
+              <motion.div
+                initial={{
+                  x: message.sender_type === "student" ? 150 : -150,
+                  scale: 0,
+                  opacity: 0,
+                }}
+                animate={{ x: 0, scale: 1, opacity: 1 }}
+                transition={{ type: "spring", stiffness: 80 }}
+                key={index}
+                className={`group w-max flex gap-x-4 items-start ${
+                  message.sender_type === "student"
+                    ? "ml-auto flex-row-reverse"
+                    : "mr-auto"
+                }`}
+              >
+                <div
                   className={`${
                     message.sender_type === "student"
-                      ? "bg-gradient-to-tr from-[#132b3e] to-[#2474a5] text-white ml-auto"
-                      : "mr-auto border border-zinc-300 text-zinc-600"
-                  }  rounded-3xl shadow-sm h-max w-max max-w-[400px] px-4 py-2 my-4 mt-auto relative`}
+                      ? "bg-gradient-to-tr from-[#132b3e] to-[#2474a5] text-white ml-auto rounded-br-none"
+                      : "border border-zinc-300 text-zinc-600 rounded-bl-none ml-auto"
+                  } rounded-xl shadow-sm h-max w-max max-w-[400px] px-4 py-2 my-4 mt-auto relative`}
                 >
                   {message.message}
-                </motion.div>
-              </div>
+                </div>
+                <div
+                  className={`flex opacity-0 group-hover:opacity-100 transition-all durtion-500 w-max gap-x-6 items-center mb-4 ${
+                    message.sender_type === "student"
+                      ? "ml-auto flex-row"
+                      : "mr-auto flex-row-reverse"
+                  }`}
+                >
+                  <p className="text-[10px] text-zinc-500">
+                    {new Date(message.created_at).toLocaleTimeString("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      hour12: true,
+                    })}
+                  </p>
+                  <div
+                    className={`w-max flex items-center gap-x-2 ${
+                      message.sender_type === "student"
+                        ? "flex-row ml-auto"
+                        : "flex-row-reverse mr-auto"
+                    }`}
+                  >
+                    <p className="text-sm text-zinc-600">
+                      {message.sender_type === "student"
+                        ? "You"
+                        : message.sender_name}
+                    </p>
+                    <Avatar className="h-6 w-6 bg-zinc-200 flex items-center justify-center font-medium uppercase text-[10px]">
+                      {message.sender_name[0]}
+                    </Avatar>
+                  </div>
+                </div>
+              </motion.div>
             ))}
           <div ref={messagesEndRef} />
         </div>
