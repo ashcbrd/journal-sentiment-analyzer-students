@@ -14,14 +14,9 @@ export default function Home() {
     <div className="w-full h-screen flex items-center justify-center overflow-hidden">
       <div className="flex flex-col items-center gap-y-6 h-max z-10 mt-40">
         <h1 className="text-5xl leading-[60px] text-center font-black w-[80%] mx-auto text-transparent bg-clip-text bg-gradient-to-tr from-[#132b3e] to-[#2474a5]">
-          SENTIMENT ANALYSIS APPLICATION JOURNAL USING NATURAL LANGUAGE
-          PROCESSING
+          Smart Journal: Leveraging BERT Algorithm for Enhanced Sentiment
+          Detection
         </h1>
-        <p className="text-center text-primary/80">
-          Unlock the Power of Your Words: Analyze, Understand, and Empower Your
-          Journal Entries with Journal Sentiment Analyzer!
-        </p>
-
         <Link href="/journal">
           <div className="relative items-center h-12 flex bg-[#132b3e] p-1 rounded-lg w-[160px] group">
             <div className="h-[80%] flex items-center justify-center rounded-md w-10 bg-[#d2fe00] absolute top-0 bottom-0 right-0 left-0 ml-[6px] m-auto group-hover:w-[92%] transition-all">

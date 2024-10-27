@@ -36,9 +36,9 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
   });
   const [error, setError] = useState(null);
   const router = useRouter();
-  const {setUser} = useUser()
+  const { setUser } = useUser();
 
-  const {toast} = useToast()
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log("api base url:  ", process.env.BASE_API_URL);
@@ -53,8 +53,8 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
         try {
           const loginResponse = await login(formData.email, formData.password);
           console.log("Login Success:", loginResponse);
-          localStorage.setItem('studentUser', JSON.stringify(loginResponse))
-          setUser(loginResponse)
+          localStorage.setItem("studentUser", JSON.stringify(loginResponse));
+          setUser(loginResponse);
           router.push("/journal");
           toast({
             variant: "default",
@@ -68,10 +68,10 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
         }
       } else if (name === "register") {
         const registerResponse = await register(formData);
-        setUser(registerResponse)
+        setUser(registerResponse);
         console.log("Register success:", registerResponse);
-        localStorage.setItem('studentUser', JSON.stringify(registerResponse))
-        router.push("/journal");
+        localStorage.setItem("studentUser", JSON.stringify(registerResponse));
+        location.reload();
         toast({
           variant: "default",
           description: "Registration successful",
