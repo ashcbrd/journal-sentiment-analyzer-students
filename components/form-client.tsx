@@ -71,6 +71,7 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
         setUser(registerResponse);
         console.log("Register success:", registerResponse);
         localStorage.setItem("studentUser", JSON.stringify(registerResponse));
+        router.push("/auth")
         location.reload();
         toast({
           variant: "default",
