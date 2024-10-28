@@ -6,7 +6,7 @@ import { usePrivateRouteRedirect } from "@/hooks/use-auth-redirection";
 
 const AuthPage = () => {
 
-  usePrivateRouteRedirect()
+  // usePrivateRouteRedirect()
 
   return (
     <div className="flex flex-col gap-y-6 bg-white p-10 rounded-lg shadow-lg shadow-zinc-200/70">
