@@ -28,7 +28,9 @@ const Navbar = () => {
     <nav className="fixed h-20 w-full  border-b shadow-md shadow-gray-300/70 backdrop-blur-md top-0 flex items-center justify-center">
       <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
         <Link href="/journal">
-          <h2 className="font-bold text-lg">LOGO HERE</h2>
+         <h1 className="text-center text-[#1b1b1b] font-black text-4xl border px-4 py-2 rounded-lg bg-gray-100 shadow-md w-max">
+        SMART JOURNAL
+      </h1>
         </Link>
         <ul className="relative flex items-center text-primary text-lg p-2 justify-center overflow-hidden">
           {navbarData.map((item, index) => {
