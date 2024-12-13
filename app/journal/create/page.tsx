@@ -16,22 +16,25 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import BackgroundPattern from "@/components/background-pattern";
-import { useUser } from "@/context/user-context";
 import { axiosInstance } from "@/lib/utils";
+import { Switch } from "@/components/ui/switch";
 
-interface journalData {
+interface JournalData {
   title: string;
   entry: string;
 }
 
 const CreateJournalPage = () => {
-  // const { user } = useUser();
-  const user = JSON.parse(localStorage.getItem('studentUser')!)
+  const user = JSON.parse(localStorage.getItem("studentUser")!);
   const router = useRouter();
-  const [journalData, setJournalData] = useState<journalData>({
+
+  const [journalData, setJournalData] = useState<JournalData>({
     title: "",
     entry: "",
   });
+
+  const [allowAdminRead, setAllowAdminRead] = useState<boolean>(false);
+
   const { toast } = useToast();
 
   const handleSubmit = async () => {
@@ -39,7 +42,9 @@ const CreateJournalPage = () => {
       const response = await axiosInstance.post("/journal", {
         ...journalData,
         student_id: user._id,
+        allow_admin_read: allowAdminRead,
       });
+
       console.log(response.data);
       toast({
         variant: "default",
@@ -59,7 +64,7 @@ const CreateJournalPage = () => {
     <div className="w-full h-screen flex items-center justify-center">
       <div className="h-max bg-white w-[600px] mx-auto rounded-xl p-10 z-10 shadow-md shadow-zinc-200 relative">
         <div className="flex items-center mb-10 gap-x-2">
-          <h2 className=" text-4xl font-bold text-primary">Create Journal</h2>
+          <h2 className="text-4xl font-bold text-primary">Create Journal</h2>
         </div>
         <div className="flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-2">
@@ -86,6 +91,14 @@ const CreateJournalPage = () => {
               }
             />
           </div>
+          <div className="flex gap-x-2 items-center">
+            <Switch
+              checked={allowAdminRead}
+              onCheckedChange={setAllowAdminRead}
+            />
+            <p className="text-zinc-600">Allow admin to read this journal.</p>
+          </div>
+
           <div className="w-full flex justify-between">
             <Button
               onClick={handleSubmit}

@@ -71,7 +71,7 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
         setUser(registerResponse);
         console.log("Register success:", registerResponse);
         localStorage.setItem("studentUser", JSON.stringify(registerResponse));
-        router.push("/auth")
+        router.push("/auth");
         location.reload();
         toast({
           variant: "default",
@@ -113,7 +113,7 @@ const FormClient: React.FC<FormClientProps> = ({ name }) => {
           </>
         ) : (
           <>
-            <Label htmlFor="userName">userName</Label>
+            <Label htmlFor="userName">Username</Label>
             <Input
               type="text"
               name="userName"
